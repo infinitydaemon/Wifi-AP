@@ -17,7 +17,7 @@ include('includes/sysstats.php');
               <div class="info-item col-xs-3"><?php echo _("Board"); ?></div><div class="info-value col-xs-3"><?php echo htmlspecialchars(RPiVersion(), ENT_QUOTES); ?></div>
             </div>
             <div class="row mb-1">
-              <div class="info-item col-xs-3"><?php echo _("OS"); ?></div><div class="info-value col-xs-3"><?php echo htmlspecialchars($os, ENT_QUOTES); ?></div>
+              <div class="info-item col-xs-3"><?php echo _("OS"); ?></div><div class="info-value col-xs-3">GNU Linux</div>
             </div>
             <div class="row mb-1">
               <div class="info-item col-xs-3"><?php echo _("Kernel"); ?></div><div class="info-value col-xs-3"><?php echo htmlspecialchars($kernel, ENT_QUOTES); ?></div>
