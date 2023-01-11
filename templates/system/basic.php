@@ -41,7 +41,7 @@ include('includes/sysstats.php');
             style="width: <?php echo htmlspecialchars($cpuload, ENT_QUOTES); ?>%"><?php echo htmlspecialchars($cpuload, ENT_QUOTES); ?>%
         </div>
       </div>
-      <div class="mb-1"><?php echo _("CPU Temp"); ?></div>
+      <div class="mb-1"><?php echo _("CPU Temperature"); ?></div>
       <div class="progress mb-4" style="height: 20px;">
         <div class="progress-bar bg-<?php echo htmlspecialchars($cputemp_status, ENT_QUOTES); ?>"
             role="progressbar" aria-valuenow="<?php echo htmlspecialchars($cputemp, ENT_QUOTES); ?>" aria-valuemin="0" aria-valuemax="100"
