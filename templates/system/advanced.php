@@ -6,13 +6,13 @@
     <?php echo CSRFTokenFieldTag() ?>
       <div class="row">
         <div class="form-group col-md-6">
-          <label for="code"><?php echo _("Web server port") ;?></label>
+          <label for="code"><?php echo _("Configuration portal port") ;?></label>
           <input type="text" class="form-control" name="serverPort" value="<?php echo htmlspecialchars($serverPort, ENT_QUOTES); ?>" />
         </div>
       </div>
       <div class="row">
         <div class="form-group col-md-6">
-          <label for="code"><?php echo _("Web server bind address") ;?></label>
+          <label for="code"><?php echo _("Web portal bind address") ;?></label>
           <input type="text" class="form-control" name="serverBind" value="<?php echo htmlspecialchars($serverBind, ENT_QUOTES); ?>" />
         </div>
       </div>
