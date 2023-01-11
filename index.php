@@ -18,11 +18,9 @@ require_once 'includes/system.php';
 require_once 'includes/sysstats.php';
 require_once 'includes/configure_client.php';
 require_once 'includes/networking.php';
-require_once 'includes/themes.php';
 require_once 'includes/data_usage.php';
 require_once 'includes/openvpn.php';
 require_once 'includes/wireguard.php';
-require_once 'includes/torproxy.php';
 
 $config = getConfig();
 $output = $return = 0;
@@ -32,7 +30,8 @@ $theme_url = getThemeOpt();
 $toggleState = getSidebarState();
 $bridgedEnabled = getBridgedState();
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -241,12 +240,6 @@ $bridgedEnabled = getBridgedState();
             break;
         case "/wg_conf":
             DisplayWireGuardConfig();
-            break;
-        case "/torproxy_conf":
-            DisplayTorProxyConfig();
-            break;
-        case "/torproxy_conf":
-            DisplayTorProxyConfig();
             break;
         case "/auth_conf":
             DisplayAuthConfig($config['admin_user'], $config['admin_pass']);
