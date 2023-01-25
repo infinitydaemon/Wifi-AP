@@ -5,4 +5,4 @@
   </picture>
   </p>
   <br>
-A feature-rich wireless router software for RPi3b/b+ specific devices. The kernel + OS is tailored for end-user security with a minimal usable RASPAP web-ui. Mainline OpSec Kernel (https://github.com/infinitydaemon/OpSec-Kernel) is used as base. 
+Telco grade secured Wi-Fi router with 2000 + wireless user handling on a single node. Its able to act as a full blown router, client, forwarder or relay. Best suited for large enterprises, universities, exhibitions, media companies or organizations that require fool proof anti man in the middle attack operation and 99.99% appliance uptime.. The kernel + OS is tailored for end-user security with a minimal usable RASPAP web-ui. Mainline OpSec Kernel (https://github.com/infinitydaemon/OpSec-Kernel) is used as base. 
