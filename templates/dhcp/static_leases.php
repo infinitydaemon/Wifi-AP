@@ -51,7 +51,7 @@
               <label class="custom-control-label" for="dhcp-ignore"><?php echo _("Limit network access to static clients") ?></label>
             </div>
             <p id="dhcp-ignore-description">
-              <small><?php echo _("Enable this option if you want RaspAP to <b>ignore any clients</b> which are not specified in the static leases list.") ?></small>
+              <small><?php echo _("Enable this option if you want AP to <b>ignore any clients</b> which are not specified in the static leases list.") ?></small>
               <small class="text-muted"><?php echo _("This option adds <code>dhcp-ignore</code> to the dnsmasq configuration.") ?></small>
             </p>
           </div>

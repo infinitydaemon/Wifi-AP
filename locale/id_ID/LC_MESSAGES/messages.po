@@ -1,17 +1,7 @@
-# RaspAP Portable Object file
-# Project home: https://github.com/billz/raspap-webgui
-# Licensed under the GNU General Public License v3.0
-# This file is distributed under the same license as the RaspAP package
-# FIRST AUTHOR billzimmerman@gmail.com, 2017
-# 
-# Translators:
-# William Zimmerman <billzimmerman@gmail.com>, 2019
-# 
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.2.1\n"
-"Report-Msgid-Bugs-To: Bill Zimmerman <billzimmerman@gmail.com>\n"
+"Report-Msgid-Bugs-To: CWD SYSTEMS <cwdsystems@protonmail.ch>\n"
 "POT-Creation-Date: 2017-10-19 08:56+0000\n"
 "PO-Revision-Date: 2019-10-25 17:42+0000\n"
 "Last-Translator: William Zimmerman <billzimmerman@gmail.com>, 2019\n"
@@ -23,14 +13,14 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: index.php
-msgid "RaspAP Wifi Configuration Portal"
-msgstr "Portal Konfigurasi Wifi RaspAP"
+msgid "Wifi Configuration Portal"
+msgstr "Portal Konfigurasi Wifi"
 
 msgid "Toggle navigation"
 msgstr "Ubah navigasi"
 
-msgid "RaspAP Wifi Portal"
-msgstr "Portal Wifi RaspAP"
+msgid "Wifi Portal"
+msgstr "Portal Wifi"
 
 msgid "Dashboard"
 msgstr "Dasbor"
@@ -62,8 +52,8 @@ msgstr "Ganti Tema"
 msgid "System"
 msgstr "Sistem"
 
-msgid "About RaspAP"
-msgstr "Tentang RaspAP"
+msgid "About AP"
+msgstr "Tentang AP"
 
 #: includes/admin.php
 msgid "Authentication settings"
@@ -150,10 +140,10 @@ msgid "Not configured"
 msgstr "Tidak dikonfigurasi"
 
 msgid ""
-"<strong>Note:</strong> WEP access points appear as 'Open'. RaspAP does not "
+"<strong>Note:</strong> WEP access points appear as 'Open'. AP does not "
 "currently support connecting to WEP"
 msgstr ""
-"<strong>Note:</strong> Poin akses WEP tampil sebagai 'Terbuka'. RaspAP saat "
+"<strong>Note:</strong> Poin akses WEP tampil sebagai 'Terbuka'. AP saat "
 "ini tak mendukung hubungan ke WEP"
 
 #: includes/dashboard.php
@@ -338,8 +328,8 @@ msgstr "Upstream DNS servers"
 msgid "Only ever query DNS servers configured below"
 msgstr "Only ever query DNS servers configured below"
 
-msgid "Enable this option if you want RaspAP to <b>send DNS queries to the servers configured below exclusively</b>. By default RaspAP also uses its upstream DHCP server's name servers."
-msgstr "Enable this option if you want RaspAP to <b>send DNS queries to the servers configured below exclusively</b>. By default RaspAP also uses its upstream DHCP server's name servers."
+msgid "Enable this option if you want AP to <b>send DNS queries to the servers configured below exclusively</b>. By default AP also uses its upstream DHCP server's name servers."
+msgstr "Enable this option if you want AP to <b>send DNS queries to the servers configured below exclusively</b>. By default AP also uses its upstream DHCP server's name servers."
 
 msgid "This option adds <code>no-resolv</code> to the dnsmasq configuration."
 msgstr "This option adds <code>no-resolv</code> to the dnsmasq configuration."

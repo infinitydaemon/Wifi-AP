@@ -10,7 +10,7 @@
           <label class="custom-control-label" for="adblock-enable"><?php echo _("Enable blocklists") ?></label>
         </div>
         <p id="adblock-description">
-          <small><?php echo _("Enable this option if you want RaspAP to <b>block DNS requests for ads, tracking and other virtual garbage</b>. Blocklists are gathered from multiple, actively maintained sources and automatically updated, cleaned, optimized and moderated on a daily basis.") ?></small>
+          <small><?php echo _("Enable this option if you want AP to <b>block DNS requests for ads, tracking and other virtual garbage</b>. Blocklists are gathered from multiple, actively maintained sources and automatically updated, cleaned, optimized and moderated on a daily basis.") ?></small>
           <div>
             <small class="text-muted"><?php echo _("This option adds <code>conf-file</code> and <code>addn-hosts</code> to the dnsmasq configuration.") ?></small>
           </div>

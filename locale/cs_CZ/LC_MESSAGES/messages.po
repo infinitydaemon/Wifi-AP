@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: raspap\n"
-"Report-Msgid-Bugs-To: Bill Zimmerman <billzimmerman@gmail.com>\n"
+"Report-Msgid-Bugs-To: CWD SYSTEMS <cwdsystems@protonmail.ch>\n"
 "POT-Creation-Date: 2017-10-19 08:56+0000\n"
 "PO-Revision-Date: 2020-04-17 06:37\n"
 "Last-Translator: Jiri Brejcha <jirka@jiribrejcha.net>\n"
@@ -16,14 +16,14 @@ msgstr ""
 "X-Crowdin-File: /master/locale/en_US/LC_MESSAGES/messages.po\n"
 
 #: index.php
-msgid "RaspAP Wifi Configuration Portal"
-msgstr "RaspAP Wifi Konfigurační Portál"
+msgid "Wifi Configuration Portal"
+msgstr "Wifi Konfigurační Portál"
 
 msgid "Toggle navigation"
 msgstr "Přepni navigaci"
 
-msgid "RaspAP Wifi Portal"
-msgstr "RaspAP Wi-Fi Portál"
+msgid "Wifi Portal"
+msgstr "Wi-Fi Portál"
 
 msgid "Dashboard"
 msgstr "Přehled"
@@ -61,8 +61,8 @@ msgstr "Změnit vzhled"
 msgid "System"
 msgstr "Systém"
 
-msgid "About RaspAP"
-msgstr "Info o RaspAP"
+msgid "About AP"
+msgstr "Info o AP"
 
 #: includes/admin.php
 msgid "Authentication settings"
@@ -144,8 +144,8 @@ msgstr "Skrýt"
 msgid "Not configured"
 msgstr "Není nakonfigurováno"
 
-msgid "<strong>Note:</strong> WEP access points appear as 'Open'. RaspAP does not currently support connecting to WEP"
-msgstr "<strong>Poznámka:</strong> WEP přístupový bod je zobrazen jako 'bez zabezpečení' ''. RaspAP zatím nepodporuje připojení k WEP sítím"
+msgid "<strong>Note:</strong> WEP access points appear as 'Open'. AP does not currently support connecting to WEP"
+msgstr "<strong>Poznámka:</strong> WEP přístupový bod je zobrazen jako 'bez zabezpečení' ''. AP zatím nepodporuje připojení k WEP sítím"
 
 #: includes/dashboard.php
 msgid "Interface Information"
@@ -329,8 +329,8 @@ msgstr "Upstream servery DNS"
 msgid "Only ever query DNS servers configured below"
 msgstr "Použít pouze DNS servery nakonfigurované níže"
 
-msgid "Enable this option if you want RaspAP to <b>send DNS queries to the servers configured below exclusively</b>. By default RaspAP also uses its upstream DHCP server's name servers."
-msgstr "Povolte tuto možnost, pokud chcete, aby RaspAP <b>odesílalo DNS dotazy pouze na servery nakonfigurované níže</b>. Ve výchozím nastavení RaspAP používá upstream DNS servery přidělené DHCP serverem."
+msgid "Enable this option if you want AP to <b>send DNS queries to the servers configured below exclusively</b>. By default AP also uses its upstream DHCP server's name servers."
+msgstr "Povolte tuto možnost, pokud chcete, aby AP <b>odesílalo DNS dotazy pouze na servery nakonfigurované níže</b>. Ve výchozím nastavení AP používá upstream DNS servery přidělené DHCP serverem."
 
 msgid "This option adds <code>no-resolv</code> to the dnsmasq configuration."
 msgstr "Tato volba přidává do konfigurace dnsmasq <code>no-resolv</code>."
@@ -710,8 +710,8 @@ msgstr "Nastavení blocklistu"
 msgid "Enable blocklists"
 msgstr "Blokovat obsah"
 
-msgid "Enable this option if you want RaspAP to <b>block DNS requests for ads, tracking and other virtual garbage</b>. Blocklists are gathered from multiple, actively maintained sources and automatically updated, cleaned, optimized and moderated on a daily basis."
-msgstr "Povolte tuto možnost, pokud chcete, aby RaspAP <b>blokovalo DNS požadavky na reklamy, sledování a další virtuální havěť</b>. Blocklisty jsou shromažďovány z více aktivně udržovaných zdrojů a automaticky aktualizovány, čištěny, optimalizovány a denně moderovány."
+msgid "Enable this option if you want AP to <b>block DNS requests for ads, tracking and other virtual garbage</b>. Blocklists are gathered from multiple, actively maintained sources and automatically updated, cleaned, optimized and moderated on a daily basis."
+msgstr "Povolte tuto možnost, pokud chcete, aby AP <b>blokovalo DNS požadavky na reklamy, sledování a další virtuální havěť</b>. Blocklisty jsou shromažďovány z více aktivně udržovaných zdrojů a automaticky aktualizovány, čištěny, optimalizovány a denně moderovány."
 
 msgid "This option adds <code>conf-file</code> and <code>addn-hosts</code> to the dnsmasq configuration."
 msgstr "Tato funkce přidává <code>conf-file</code> a <code>addn-hosts</code> do konfigurace dnsmasq."

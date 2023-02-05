@@ -11,7 +11,7 @@
           <label class="custom-control-label" for="no-resolv"><?php echo _("Only ever query DNS servers configured below") ?></label>
         </div>
         <p id="no-resolv-description">
-          <small><?php echo _("Enable this option if you want RaspAP to <b>send DNS queries to the servers configured below exclusively</b>. By default RaspAP also uses its upstream DHCP server's name servers.") ?></small>
+          <small><?php echo _("Enable this option if you want AP to <b>send DNS queries to the servers configured below exclusively</b>. By default AP also uses its upstream DHCP server's name servers.") ?></small>
           <br><small class="text-muted"><?php echo _("This option adds <code>no-resolv</code> to the dnsmasq configuration.") ?></small>
         </p>
       </div>

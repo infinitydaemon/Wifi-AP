@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: raspap\n"
-"Report-Msgid-Bugs-To: Bill Zimmerman <billzimmerman@gmail.com>\n"
+"Report-Msgid-Bugs-To: CWD SYSTEMS <cwdsystems@protonmail.ch>\n"
 "POT-Creation-Date: 2017-10-19 08:56+0000\n"
 "PO-Revision-Date: 2022-06-28 09:13\n"
 "Last-Translator: Bill Zimmerman <billzimmerman@gmail.com>\n"
@@ -18,14 +18,14 @@ msgstr ""
 "X-Crowdin-File-ID: 10\n"
 
 #: index.php
-msgid "RaspAP Wifi Configuration Portal"
-msgstr "RaspAP Configuration de Portail Wifi"
+msgid "Wifi Configuration Portal"
+msgstr "Configuration de Portail Wifi"
 
 msgid "Toggle navigation"
 msgstr "Basculer la navigation"
 
-msgid "RaspAP Wifi Portal"
-msgstr "RaspAP Portail Wifi"
+msgid "Wifi Portal"
+msgstr "Portail Wifi"
 
 msgid "Dashboard"
 msgstr "Tableau de bord"
@@ -63,8 +63,8 @@ msgstr "Change Thème"
 msgid "System"
 msgstr "Système"
 
-msgid "About RaspAP"
-msgstr "À propos de RaspAP"
+msgid "About AP"
+msgstr "À propos de AP"
 
 #: includes/admin.php
 msgid "Authentication settings"
@@ -155,8 +155,8 @@ msgstr "Connu"
 msgid "Nearby"
 msgstr "À proximité"
 
-msgid "<strong>Note:</strong> WEP access points appear as 'Open'. RaspAP does not currently support connecting to WEP"
-msgstr "<strong>Remarque:</strong> Les points d'accès WEP apparaissent comme 'ouverts'. RaspAP ne prend actuellement pas en charge la connexion via WEP"
+msgid "<strong>Note:</strong> WEP access points appear as 'Open'. AP does not currently support connecting to WEP"
+msgstr "<strong>Remarque:</strong> Les points d'accès WEP apparaissent comme 'ouverts'. AP ne prend actuellement pas en charge la connexion via WEP"
 
 msgid "No Wifi stations found"
 msgstr "Aucune station Wi-Fi trouvée"
@@ -334,8 +334,8 @@ msgstr "Interface"
 msgid "Enable DHCP for this interface"
 msgstr "Activer le DHCP pour cette interface"
 
-msgid "Enable this option if you want RaspAP to assign IP addresses on the selected interface."
-msgstr "Activez cette option si vous souhaitez que le RaspAP attribue des adresses IP sur l'interface sélectionnée."
+msgid "Enable this option if you want AP to assign IP addresses on the selected interface."
+msgstr "Activez cette option si vous souhaitez que le AP attribue des adresses IP sur l'interface sélectionnée."
 
 msgid "DNS Server"
 msgstr "Serveur DNS"
@@ -418,8 +418,8 @@ msgstr "Serveurs DNS amont"
 msgid "Only ever query DNS servers configured below"
 msgstr "Uniquement les serveurs DNS de requête configurés ci-dessous"
 
-msgid "Enable this option if you want RaspAP to <b>send DNS queries to the servers configured below exclusively</b>. By default RaspAP also uses its upstream DHCP server's name servers."
-msgstr "Activer cette option si vous voulez que RaspAP <b>envoie des requêtes DNS aux serveurs configurés ci-dessous exclusivement</b>. Par défaut, RaspAP utilise aussi les serveurs de noms du serveur DHCP amont."
+msgid "Enable this option if you want AP to <b>send DNS queries to the servers configured below exclusively</b>. By default AP also uses its upstream DHCP server's name servers."
+msgstr "Activer cette option si vous voulez que AP <b>envoie des requêtes DNS aux serveurs configurés ci-dessous exclusivement</b>. Par défaut, AP utilise aussi les serveurs de noms du serveur DHCP amont."
 
 msgid "This option adds <code>no-resolv</code> to the dnsmasq configuration."
 msgstr "Cette option ajoute <code>no-resolv</code> à la configuration dnsmasq."
@@ -448,8 +448,8 @@ msgstr "Accès restreint"
 msgid "Limit network access to static clients"
 msgstr "Limiter l'accès au réseau aux clients baux statiques"
 
-msgid "Enable this option if you want RaspAP to <b>ignore any clients</b> which are not specified in the static leases list."
-msgstr "Activer cette option si tu veux que RaspAP <b>ignore les clients</b> qui ne sont pas spécifiés dans la liste des baux statiques."
+msgid "Enable this option if you want AP to <b>ignore any clients</b> which are not specified in the static leases list."
+msgstr "Activer cette option si tu veux que AP <b>ignore les clients</b> qui ne sont pas spécifiés dans la liste des baux statiques."
 
 msgid "This option adds <code>dhcp-ignore</code> to the dnsmasq configuration."
 msgstr "Cette option ajoute <code>no-resolv</code> à la configuration dnsmasq."
@@ -566,8 +566,8 @@ msgstr "Désactiver <code>disassoc_low_ack</code>"
 msgid "Do not disassociate stations based on excessive transmission failures."
 msgstr "Ne pas dissocier les points d'acces sur la base de défaillances de transmission excessives."
 
-msgid "Executing RaspAP service start"
-msgstr "Démarrage du service RaspAP"
+msgid "Executing AP service start"
+msgstr "Démarrage du service AP"
 
 msgid "Close"
 msgstr "Fermer"
@@ -916,8 +916,8 @@ msgstr "Entrez votre nom d'utilisateur et votre mot de passe"
 msgid "Certificates in the configuration file"
 msgstr "Certificats dans le fichier de configuration"
 
-msgid "RaspAP supports certificates by including them in the configuration file."
-msgstr "RaspAP prend en charge les certificats en les incluant dans le fichier de configuration."
+msgid "AP supports certificates by including them in the configuration file."
+msgstr "AP prend en charge les certificats en les incluant dans le fichier de configuration."
 
 msgid "Signing certification authority (CA) certificate (e.g. <code>ca.crt</code>): enclosed in <code>&lt;ca> ... &lt;/ca></code> tags."
 msgstr "Certificat d'autorité de certification (CA) de signature (par exemple <code>ca.crt</code>) : joint dans <code>&lt;ca> ... &lt;/ca></code> balises."
@@ -1009,8 +1009,8 @@ msgstr "Paramètres anti-spam"
 msgid "Enable blocklists"
 msgstr "Activer les listes noires"
 
-msgid "Enable this option if you want RaspAP to <b>block DNS requests for ads, tracking and other virtual garbage</b>. Blocklists are gathered from multiple, actively maintained sources and automatically updated, cleaned, optimized and moderated on a daily basis."
-msgstr "Activer cette option si tu veux que RaspAP <b>bloque les requêtes DNS pour les publicités, le suivi et d'autres déchets virtuels</b>. Les listes de blocage sont rassemblées à partir de sources multiples, activement maintenues et mises à jour automatiquement, nettoyées, optimisées et modérées quotidiennement."
+msgid "Enable this option if you want AP to <b>block DNS requests for ads, tracking and other virtual garbage</b>. Blocklists are gathered from multiple, actively maintained sources and automatically updated, cleaned, optimized and moderated on a daily basis."
+msgstr "Activer cette option si tu veux que AP <b>bloque les requêtes DNS pour les publicités, le suivi et d'autres déchets virtuels</b>. Les listes de blocage sont rassemblées à partir de sources multiples, activement maintenues et mises à jour automatiquement, nettoyées, optimisées et modérées quotidiennement."
 
 msgid "This option adds <code>conf-file</code> and <code>addn-hosts</code> to the dnsmasq configuration."
 msgstr "Cette option ajoute <code>conf-file</code> et <code>addn-hosts</code> à la configuration de dnsmasq."
@@ -1090,8 +1090,8 @@ msgstr "Créer une configuration locale WireGuard"
 msgid "Enable server"
 msgstr "Activer le serveur"
 
-msgid "Enable this option to secure network traffic by creating an encrypted tunnel between RaspAP and configured peers."
-msgstr "Activer cette option pour sécuriser le trafic réseau en créant un tunnel chiffré entre RaspAP et les pairs configurés."
+msgid "Enable this option to secure network traffic by creating an encrypted tunnel between AP and configured peers."
+msgstr "Activer cette option pour sécuriser le trafic réseau en créant un tunnel chiffré entre AP et les pairs configurés."
 
 msgid "This setting generates a new WireGuard <code>.conf</code> file on this device."
 msgstr "Ce paramètre génère un nouveau fichier WireGuard <code>.conf</code> sur cet appareil."
@@ -1114,8 +1114,8 @@ msgstr "Pair"
 msgid "Enable peer"
 msgstr "Activer le pair"
 
-msgid "Enable this option to encrypt traffic by creating a tunnel between RaspAP and this peer."
-msgstr "Active cette option pour chiffrer le trafic en créant un tunnel entre RaspAP et ce pair."
+msgid "Enable this option to encrypt traffic by creating a tunnel between AP and this peer."
+msgstr "Active cette option pour chiffrer le trafic en créant un tunnel entre AP et ce pair."
 
 msgid "This option adds <code>client.conf</code> to the WireGuard configuration."
 msgstr "Cette option ajoute <code>client.conf</code> à la configuration de WireGuard."
@@ -1192,8 +1192,8 @@ msgstr "Exception : service"
 msgid "allow SSH access on port 22"
 msgstr "Autoriser l'accès SSH sur le port 22"
 
-msgid "allow access to the RaspAP GUI on port 80 or 443"
-msgstr "Autoriser l'accès à l'interface RaspAP sur le port 80 ou 443"
+msgid "allow access to the AP GUI on port 80 or 443"
+msgstr "Autoriser l'accès à l'interface AP sur le port 80 ou 443"
 
 msgid "Allow incoming connections for some services from the internet side."
 msgstr "Autoriser les connexions entrantes pour certains services Internet."

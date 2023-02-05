@@ -1,13 +1,7 @@
-# RaspAP Portable Object file # Project home: https://github.com/billz/raspap-webgui 
-# Licensed under the GNU General Public License v3.0 
-# This file is distributed under the same license as the RaspAP package 
-# FIRST AUTHOR billzimmerman@gmail.com, 2017 
-# 
-#, fuzzy 
 msgid "" 
 msgstr "" 
 "Project-Id-Version: 1.2.1\n" 
-"Report-Msgid-Bugs-To: Bill Zimmerman <billzimmerman@gmail.com>\n" 
+"Report-Msgid-Bugs-To: CWD SYSTEMS <cwdsystems@protonmail.ch>\n" 
 "POT-Creation-Date: 2017-10-19 08:56+0000\n" 
 "PO-Revision-Date: 2020-01-14 17:15+0000\n" 
 "Last-Translator: Chris K <karasoulis@protonmail.com>\n" 
@@ -18,14 +12,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n" 
 
 #: index.php 
-msgid "RaspAP Wifi Configuration Portal" 
-msgstr "Σελίδα ρυθμίσεων RaspAP WiFi" 
+msgid "Wifi Configuration Portal" 
+msgstr "Σελίδα ρυθμίσεων WiFi" 
 
 msgid "Toggle navigation" 
 msgstr "Εναλλαγή πλοήγησης" 
 
-msgid "RaspAP Wifi Portal" 
-msgstr "Πύλη RaspAP WiFi" 
+msgid "AP Wifi Portal" 
+msgstr "Πύλη AP WiFi" 
 
 msgid "Dashboard" 
 msgstr "Πίνακας" 
@@ -57,8 +51,8 @@ msgstr "Αλλαγή Θέματος"
 msgid "System" 
 msgstr "Σύστημα" 
 
-msgid "About RaspAP" 
-msgstr "Περί RaspAP" 
+msgid "About AP" 
+msgstr "Περί AP" 
 
 #: includes/admin.php 
 msgid "Authentication settings" 
@@ -140,8 +134,8 @@ msgstr "Απόκρυψη"
 msgid "Not configured" 
 msgstr "Δεν έχει ρυθμιστεί" 
 
-msgid "<strong>Note:</strong> WEP access points appear as 'Open'. RaspAP does not currently support connecting to WEP" 
-msgstr "<strong>Σημείωση:</strong> Τα σημεία πρόσβασης WEP εμφανίζονται ως 'Ανοιχτά'. Το RaspAP δεν υποστηρίζει αυτήν τη στιγμή τη σύνδεση με WEP" 
+msgid "<strong>Note:</strong> WEP access points appear as 'Open'. AP does not currently support connecting to WEP" 
+msgstr "<strong>Σημείωση:</strong> Τα σημεία πρόσβασης WEP εμφανίζονται ως 'Ανοιχτά'. Το AP δεν υποστηρίζει αυτήν τη στιγμή τη σύνδεση με WEP" 
 
 #: includes/dashboard.php 
 msgid "Interface Information" 
@@ -325,8 +319,8 @@ msgstr "Upstream DNS servers"
 msgid "Only ever query DNS servers configured below"
 msgstr "Only ever query DNS servers configured below"
 
-msgid "Enable this option if you want RaspAP to <b>send DNS queries to the servers configured below exclusively</b>. By default RaspAP also uses its upstream DHCP server's name servers."
-msgstr "Enable this option if you want RaspAP to <b>send DNS queries to the servers configured below exclusively</b>. By default RaspAP also uses its upstream DHCP server's name servers."
+msgid "Enable this option if you want AP to <b>send DNS queries to the servers configured below exclusively</b>. By default AP also uses its upstream DHCP server's name servers."
+msgstr "Enable this option if you want AP to <b>send DNS queries to the servers configured below exclusively</b>. By default AP also uses its upstream DHCP server's name servers."
 
 msgid "This option adds <code>no-resolv</code> to the dnsmasq configuration."
 msgstr "This option adds <code>no-resolv</code> to the dnsmasq configuration."
