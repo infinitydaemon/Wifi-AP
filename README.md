@@ -24,7 +24,7 @@ if __name__ == '__main__':
     me = CWD_AP()
 ```
   
-Telco grade secured Wi-Fi router with 1000 + wireless user handling on a single node. Its able to act as a full blown wireless router, client, forwarder, VPN client or wireless relay. Best suited for large enterprises, universities, exhibitions, media companies or organizations that require fool proof anti man in the middle attack operation and 99.99% appliance uptime.. The kernel + OS is tailored for end-user security with a minimal usable RASPAP web-ui. Mainline OpSec Kernel (https://github.com/infinitydaemon/OpSec-Kernel) is used as base. Out of the box setup ready to connect with CWD GATE for Wireguard VPN access.
+Telco grade secured Wi-Fi router with 1000 + wireless user handling on a single node. Its able to act as a full blown wireless router, client, forwarder, VPN client or wireless relay. Best suited for large enterprises, universities, exhibitions, media companies or organizations that require fool proof anti man in the middle attack operation and 99.99999% appliance uptime.. The kernel + OS is tailored for end-user security with a minimal usable RASPAP web-ui. Mainline OpSec Kernel (https://github.com/infinitydaemon/OpSec-Kernel) is used as base. Out of the box setup ready to connect with CWD GATE for Wireguard VPN access.
 
 To provide wireless access for 1022 wireless users for Class A, you need to use a CIDR Notation of /22 i.e 10.3.1.1/22. 
 
