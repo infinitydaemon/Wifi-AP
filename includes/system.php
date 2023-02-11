@@ -4,14 +4,8 @@ require_once 'includes/status_messages.php';
 require_once 'config.php';
 require_once 'app/lib/system.php';
 
-/**
- * Find the version of the Raspberry Pi
- * Currently only used for the system information page but may useful elsewhere
- */
-
 function RPiVersion()
 {
-    // Lookup table from http://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board-version/
     $revisions = array(
     '0002' => 'Model B Revision 1.0',
     '0003' => 'Model B Revision 1.0 + ECN0001',
@@ -24,26 +18,26 @@ function RPiVersion()
     '000d' => 'Model B Revision 2.0 (512 MB)',
     '000e' => 'Model B Revision 2.0 (512 MB)',
     '000f' => 'Model B Revision 2.0 (512 MB)',
-    '0010' => 'Model B+',
-    '0013' => 'Model B+',
-    '0011' => 'Compute Module',
-    '0012' => 'Model A+',
-    'a01041' => 'a01041',
-    'a21041' => 'a21041',
-    '900092' => 'PiZero 1.2',
-    '900093' => 'PiZero 1.3',
-    '9000c1' => 'PiZero W',
+    '0010' => 'CWD Systems Appliance',
+    '0013' => 'CWD Systems Appliance',
+    '0011' => 'CWD Systems Appliance',
+    '0012' => 'CWD Systems Appliance',
+    'a01041' => 'CWD Systems Appliance',
+    'a21041' => 'CWD Systems Appliance',
+    '900092' => 'CWD Systems Appliance',
+    '900093' => 'CWD Systems Appliance',
+    '9000c1' => 'CWD Systems Appliance',
     'a02082' => 'CWD Systems Appliance',
     'a22082' => 'CWD Systems Appliance',
     'a32082' => 'CWD Systems Appliance',
     'a52082' => 'CWD Systems Appliance',
     'a020d3' => 'CWD Systems Appliance',
-    'a220a0' => 'Compute Module 3',
-    'a020a0' => 'Compute Module 3',
-    'a02100' => 'Compute Module 3+',
-    'a03111' => 'Model 4B Revision 1.1 (1 GB)',
-    'b03111' => 'Model 4B Revision 1.1 (2 GB)',
-    'c03111' => 'Model 4B Revision 1.1 (4 GB)'
+    'a220a0' => 'CWD Systems Appliance',
+    'a020a0' => 'CWD Systems Appliance',
+    'a02100' => 'CWD Systems Appliance',
+    'a03111' => 'CWD Systems Appliance',
+    'b03111' => 'CWD Systems Appliance',
+    'c03111' => 'CWD Systems Appliance'
     );
 
     $cpuinfo_array = '';
@@ -61,10 +55,6 @@ function RPiVersion()
     }
 }
 
-/**
- *
- *
- */
 function DisplaySystem()
 {
 
