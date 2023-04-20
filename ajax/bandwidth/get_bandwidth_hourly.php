@@ -1,11 +1,13 @@
-<?php 
+<?php
 
 require '../../includes/csrf.php';
 
-if (filter_input(INPUT_GET, 'tu') == 'h') {
+if (filter_input(INPUT_GET, 'tu', FILTER_SANITIZE_STRING) == 'h') {
 
-    header('X-Content-Type-Options: nosniff');
     header('Content-Type: application/json');
+    header('X-Content-Type-Options: nosniff');
+
+    $interface = 'eth0';
 
     $data_template = array(
     0     => array('date' => '00:00', 'rx' => 0, 'tx' => 0),
@@ -34,33 +36,35 @@ if (filter_input(INPUT_GET, 'tu') == 'h') {
     23     => array('date' => '23:00', 'rx' => 0, 'tx' => 0)
     );
 
+    $datasizeunits = filter_input(INPUT_GET, 'dsu', FILTER_SANITIZE_STRING);
+    $dsu_factor = $datasizeunits == "mb" ? 1024 * 1024 : 1024;
+
     exec(sprintf('vnstat -i %s --json h', escapeshellarg($interface)), $jsonstdoutvnstat, $exitcodedaily);
     if ($exitcodedaily !== 0) {
         exit('vnstat error');
     }
 
-    $datasizeunits = filter_input(INPUT_GET, 'dsu');
-    $dsu_factor = $datasizeunits == "mb" ? 1024 * 1024 : 1024;
-
-    $jsonobj = json_decode($jsonstdoutvnstat[0], true)['interfaces'][0];
-    $jsonData = $jsonobj['traffic']['hour'];
-    for ($i = count($jsonData) - 1; $i >= 0 && $i >= count($jsonData)-25; --$i) {
-        $data_template[$jsonData[$i]['time']['hour']]['rx'] = round($jsonData[$i]['rx'] / $dsu_factor, 0);
-        $data_template[$jsonData[$i]['time']['hour']]['tx'] = round($jsonData[$i]['tx'] / $dsu_factor, 0);
-    }
-
-    $data = array();
-    $hour = $jsonobj['updated']['time']['hour'];
-    foreach ($data_template as $key => $value) {
-        if ($key > $hour) {
-            array_push($data, $value);
+    if (!empty($jsonstdoutvnstat[0])) {
+        $jsonobj = json_decode($jsonstdoutvnstat[0], true)['interfaces'][0];
+        $jsonData = $jsonobj['traffic']['hour'];
+        for ($i = count($jsonData) - 1; $i >= 0 && $i >= count($jsonData)-25; --$i) {
+            $data_template[$jsonData[$i]['time']['hour']]['rx'] = round($jsonData[$i]['rx'] / $dsu_factor, 0);
+            $data_template[$jsonData[$i]['time']['hour']]['tx'] = round($jsonData[$i]['tx'] / $dsu_factor, 0);
         }
-    }
-    foreach ($data_template as $key => $value) {
-        if ($key <= $hour) {
-            array_push($data, $value);
+
+        $data = array();
+        $hour = $jsonobj['updated']['time']['hour'];
+        foreach ($data_template as $key => $value) {
+            if ($key > $hour) {
+                array_push($data, $value);
+            }
         }
+        foreach ($data_template as $key => $value) {
+            if ($key <= $hour) {
+                array_push($data, $value);
+            }
+        }
+        echo json_encode($data);
+        exit(0);
     }
-    echo json_encode($data);
-    exit(0);
 }
