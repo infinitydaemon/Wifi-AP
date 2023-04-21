@@ -3,24 +3,44 @@
 require_once '../../includes/config.php';
 require_once '../../includes/functions.php';
 
-if (isset($_POST['cfg_id'])) {
-    $ovpncfg_id = $_POST['cfg_id'];
-    $ovpncfg_client = RASPI_OPENVPN_CLIENT_PATH.$ovpncfg_id.'_client.conf';
-    $ovpncfg_login = RASPI_OPENVPN_CLIENT_PATH.$ovpncfg_id.'_login.conf';
-
-    // remove existing client config +login and symbolically link the selected one
-    system("sudo rm ".RASPI_OPENVPN_CLIENT_CONFIG, $return);
-    system("sudo ln -s $ovpncfg_client ".RASPI_OPENVPN_CLIENT_CONFIG, $return);
-    system("sudo rm ".RASPI_OPENVPN_CLIENT_LOGIN, $return);
-    system("sudo ln -s $ovpncfg_login ".RASPI_OPENVPN_CLIENT_LOGIN, $return);
-
-    // restart service
-    exec("sudo /bin/systemctl stop openvpn-client@client", $return);
-    sleep(1);
-    exec("sudo /bin/systemctl enable openvpn-client@client", $return);
-    sleep(1);
-    exec("sudo /bin/systemctl start openvpn-client@client", $return);
-
-    echo json_encode($return);
+if (!isset($_POST['cfg_id'])) {
+    exit; // Exit early if the POST parameter is missing
 }
 
+$ovpncfg_id = $_POST['cfg_id'];
+$ovpncfg_client = RASPI_OPENVPN_CLIENT_PATH . $ovpncfg_id . '_client.conf';
+$ovpncfg_login = RASPI_OPENVPN_CLIENT_PATH . $ovpncfg_id . '_login.conf';
+
+// Remove existing client config and login files and symbolically link the selected ones
+$commands = [
+    "sudo rm -f " . RASPI_OPENVPN_CLIENT_CONFIG,
+    "sudo ln -sf " . escapeshellarg($ovpncfg_client) . " " . RASPI_OPENVPN_CLIENT_CONFIG,
+    "sudo rm -f " . RASPI_OPENVPN_CLIENT_LOGIN,
+    "sudo ln -sf " . escapeshellarg($ovpncfg_login) . " " . RASPI_OPENVPN_CLIENT_LOGIN,
+];
+
+foreach ($commands as $command) {
+    exec($command, $output, $return);
+    if ($return !== 0) {
+        // Handle error, log, or display error message to the user
+        exit;
+    }
+}
+
+// Restart the OpenVPN client service
+$commands = [
+    "sudo /bin/systemctl stop openvpn-client@client",
+    "sudo /bin/systemctl enable openvpn-client@client",
+    "sudo /bin/systemctl start openvpn-client@client",
+];
+
+foreach ($commands as $command) {
+    exec($command, $output, $return);
+    if ($return !== 0) {
+        // Handle error, log, or display error message to the user
+        exit;
+    }
+}
+
+// Return success response as JSON
+echo json_encode(['success' => true]);
