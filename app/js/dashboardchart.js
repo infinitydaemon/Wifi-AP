@@ -2,14 +2,14 @@
   "use strict";
 
   /**
-   * Create a Chart.js barchart.
+   * Create a Chart.js line chart.
    */
   function CreateChart(ctx, labels) {
-    var barchart = new Chart(ctx,{
+    var lineChart = new Chart(ctx, {
       type: 'line',
       options: {
         responsive: true,
-		    maintainAspectRatio: false,
+        maintainAspectRatio: false,
         scales: {
           xAxes: [{
             scaleLabel: {
@@ -36,7 +36,7 @@
         datasets: []
       }
     });
-    return barchart;
+    return lineChart;
   }
 
   function ShowBandwidthChartHandler(e) {
@@ -62,14 +62,14 @@
         return e.date;
       });
       // Init. chart with label series
-      var barchart = CreateChart('divDBChartBandwidth'+timeunit, labels);
+      var lineChart = CreateChart('divDBChartBandwidth'+timeunit, labels);
       var dataRx = jsondata.map(function(e) {
         return e.rx;
       });
       var dataTx = jsondata.map(function(e) {
         return e.tx;
       });
-      addData(barchart, dataTx, dataRx, datasizeunits);
+      addData(lineChart, dataTx, dataRx, datasizeunits);
     }).fail(function(xhr, textStatus) {
       if (window.console) {
         console.error('server error');
@@ -78,18 +78,19 @@
       }
     });
   }
+  
   /**
    * Add data array to datasets of current chart.
    */
   function addData(chart, dataTx, dataRx, datasizeunits) {
-   chart.data.datasets.push({
+    chart.data.datasets.push({
       label: 'Send'+' '+datasizeunits.toUpperCase(),
       yAxisID: 'y-axis-1',
       borderColor: 'rgba(75, 192, 192, 1)',
       backgroundColor: 'rgba(75, 192, 192, 0.2)',
       data: dataTx
     });
-   chart.data.datasets.push({
+    chart.data.datasets.push({
       label: 'Receive'+' '+datasizeunits.toUpperCase(),
       yAxisID: 'y-axis-1',
       borderColor: 'rgba(192, 192, 192, 1)',
@@ -98,9 +99,9 @@
     });
     chart.update();
   }
+
   $(document).ready(function() {
     ShowBandwidthChartHandler();
   });
 
-})(jQuery, t);
-
+})(jQuery, _t);
