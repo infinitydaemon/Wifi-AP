@@ -6,9 +6,10 @@ function getConfig(): array
     ];
 
     $authFile = RASPI_CONFIG . '/raspap.auth';
-    if (file_exists($authFile) && $authDetails = file($authFile, FILE_IGNORE_NEW_LINES)) {
-        $config['admin_user'] = $authDetails[0];
-        $config['admin_pass'] = $authDetails[1];
+    if (file_exists($authFile)) {
+        $authDetails = file($authFile, FILE_IGNORE_NEW_LINES);
+        $config['admin_user'] = $authDetails[0] ?? $config['admin_user'];
+        $config['admin_pass'] = $authDetails[1] ?? $config['admin_pass'];
     }
 
     return $config;
