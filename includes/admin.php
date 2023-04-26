@@ -2,6 +2,9 @@
 
 require_once 'includes/status_messages.php';
 
+// Set session timeout value to 10 minutes
+$sessionTimeout = 10 * 60; // seconds
+
 if (!defined('RASPI_ADMIN_DETAILS')) {
     define('RASPI_ADMIN_DETAILS', '/path/to/admin/details');
 }
@@ -14,6 +17,21 @@ if (!defined('RASPI_ADMIN_DETAILS')) {
  */
 function DisplayAuthConfig($username, $password)
 {
+    // Start or resume the session
+    session_start();
+
+    // Check if the session is still active
+    if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $sessionTimeout)) {
+        // Session expired, destroy the session and redirect to login
+        session_unset();
+        session_destroy();
+        header('Location: login.php');
+        exit();
+    }
+
+    // Update the last activity timestamp
+    $_SESSION['last_activity'] = time();
+
     // Initialize a status message container
     $status = new StatusMessages();
 
@@ -50,4 +68,7 @@ function DisplayAuthConfig($username, $password)
 
     // Render the authentication configuration template
     echo renderTemplate('admin', compact('status', 'username'));
+
+    // Close the session
+    session_write_close();
 }
