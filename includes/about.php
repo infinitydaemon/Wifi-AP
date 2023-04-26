@@ -2,15 +2,16 @@
 
 require_once "app/lib/Parsedown.php";
 
-/**
- * Displays info about the RaspAP project
- */
-function DisplayAbout()
+function renderAboutPage()
 {
-    $Parsedown = new Parsedown();
-    $strContent = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/BACKERS.md');
-    $sponsorsHtml = $Parsedown->text($strContent);
-
-    echo renderTemplate("about", compact('sponsorsHtml'));
+    try {
+        $Parsedown = new Parsedown();
+        $filePath = dirname(__FILE__) . '/BACKERS.md';
+        $strContent = file_get_contents($filePath);
+        $sponsorsHtml = $Parsedown->text($strContent);
+    
+        echo renderTemplate("about", compact('sponsorsHtml'));
+    } catch (Exception $e) {
+        // handle the error here
+    }
 }
-
