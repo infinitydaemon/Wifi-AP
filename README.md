@@ -59,3 +59,5 @@ IP Class:	B
 CIDR Notation:	/21
 IP Type:	Private
 ```
+
+In order to keep buffer bloat balanced, it is advised to keep number of wireless users under 250 per access point. 
