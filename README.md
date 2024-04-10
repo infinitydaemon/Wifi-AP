@@ -12,7 +12,7 @@ class CWD_AP():
   def __init__(self):
     self.name = "cwd";
     self.username = "cwdsystems";
-    self.location = "USA, Canada, Pakistan, KyrgzRepublic, Indonesia";
+    self.location = "KyrgzRepublic";
     self.protonmail = "@cwdsystems";
     self.web = "https://cwd.systems";
     self.languages ="JS,PHP,HTML,C";
